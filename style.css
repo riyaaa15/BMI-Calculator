@@ -12,7 +12,7 @@ body {
     justify-content: center;
 }
 .container{
-    width: 550px;
+    width: 700px;
     padding: 30px;
     display: flex;
     align-items: center;
@@ -22,6 +22,10 @@ h1{
     margin-bottom: 20px;
      font-size: 50px;
     font-weight: 800;
+    color: #76bff4f8;
+}
+.highlight{
+    color: #000;
 }
 .field{
     display: flex;
@@ -33,32 +37,62 @@ h1{
 .input{
     height: 40px;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 30px;
     padding-left: 20px;
     margin-left: 20px;
-    background: rgb(231, 222, 238);
-    border: none;
     outline: none;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: linear-gradient(
+        145deg,
+        #e7deee, #e7deee
+    );
+    backdrop-filter: blur(8px);
+    box-shadow:
+        0 6px 15px rgba(0,0,0,0.12),
+        inset 0 2px 4px rgba(255,255,255,0.6),
+        inset 0 -2px 5px rgba(0,0,0,0.08);
+
+    transition: 0.25s ease;
 }
 
 label{
     font-size: larger;
     font-weight: 800;
 }
-.calculate{
-    margin-top: 10px;
-    height: 50px;
+
+.btns{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.calculate, .clear{
+    height: 55px;
     width: 250px;
-    font-size: 28px;
-    font-weight: 800;
-    border-radius: 20px;
-    background: #c6e0f3f8;
-    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+    background: linear-gradient(
+        145deg,
+       #c6e0f3f8, #c6e0f3f8
+    );
+    backdrop-filter: blur(8px);
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15),
+        inset 0 2px 2px rgba(255,255,255,0.6),
+        inset 0 -3px 6px rgba(0,0,0,0.1);
+    transition: all 0.25s ease;
 }
 
-h3{
+.clear{
+    width: 100px;
+}
+
+.result-box{
     margin-top: 20px;
     font-size: 20px;
+    display: none;
 }
 #result{
     padding-left: 9px;
@@ -74,9 +108,19 @@ h3{
     border-radius: 20px;
     background: #c6e0f3f8;
     border: none; 
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15),
+        inset 0 2px 5px rgba(255,255,255,0.6),
+        inset 0 -3px 6px rgba(0,0,0,0.1);
+
+    transition: all 0.3s ease;
 }
 
 .img{
-    height: 250px;
-    width: 800px;
+    height: auto;
+    width: 100%;
 }

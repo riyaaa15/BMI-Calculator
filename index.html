@@ -9,26 +9,29 @@
 <body>
     
     <div class="container">
-       <h1>BMI Calculator</h1>
+       <h1>BMI <span class="highlight">Calculator</span></h1>
 
        <div class="field">
         <label for="height">Height (cm): </label>
-       <input type="text" placeholder="Enter height in cm" class="input" id="height"> 
+       <input type="number" placeholder="Enter height in cm" class="input" id="height"> 
        </div>
 
        <div class="field">
         <label for="weight">Weight (Kg):</label>
-       <input type="text" placeholder="Enter weight in kg" class="input" id="weight">
+       <input type="number" placeholder="Enter weight in kg" class="input" id="weight">
        </div>
        
-       <button class="calculate">Calculate BMI</button>
-
-       <h3>
+       <div class="btns">
+        <button class="calculate">Calculate BMI</button>
+       <button class="clear">Clear</button>
+       </div>
+       
+       <h3 class="result-box">
         Your BMI : <br>
-        <span id="result">22.3</span>
+        <span id="result"></span>
        </h3>
 
-       <button class="category">Category: Normal Weight</button>
+       <div class="category">Your Category: </div>
 
        <img src="image.png" class="img">
        
